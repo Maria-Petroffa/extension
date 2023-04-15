@@ -1,0 +1,53 @@
+{
+    "manifest_version": 3,
+    "name": "do useful: your study assistant",
+    "version": "1.0",
+    "description": "do useful is a smart solution for increasing your effectiveness while studying on Coursera, Futurelearn, EdX and online courses",
+    "icons": {
+        "16": "images/logo/16.png",
+        "48": "images/logo/48.png",
+        "128": "images/logo/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                
+                "css/pulseButton.css",
+                "css/push.css"
+            ],
+            "js": [
+                "js/content.js",
+                "js/contentPulseButton.js",
+                "js/contentNotyForAutorisation.js"
+                
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "notifications",
+        "cookies",
+        "webNavigation",
+        "storage",
+        "identity",
+        "scripting",
+        "alarms",
+        "idle",
+        "nativeMessaging"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "action": {
+        "default_title": "do useful",
+        "default_icon": "images/logo/48.png",
+        "default_popup": "html/popup.html"
+    }
+}

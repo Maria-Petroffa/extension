@@ -1,0 +1,92 @@
+.push {
+    position: fixed;
+    z-index: 16000000;
+    width: 350px !important;
+    top: 5%;
+    right: -100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    font-family: "Segoe UI", Tahoma, sans-serif !important;
+    font-size: 15px !important;
+    animation: slide 0.6s forwards;
+    color: black;
+}
+
+.push-buttons {
+    display: flex;
+    height: 40px !important;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.yes-button,
+.no-button {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-weight: bold;
+    outline: none !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    cursor: pointer !important;
+    font-weight: 100 !important;
+    font-size: 17px !important;
+    line-height: 21px !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+}
+
+.yes-button {
+    border: 1px solid #009e0f;
+    background-color: #75c150 !important;
+}
+
+.no-button {
+    color: white;
+    border: 1px solid rgb(137, 0, 0);
+    background-color: rgba(51, 51, 51, 0.36);
+}
+
+.yes-button:hover {
+    background-color: #55a130;
+}
+
+.no-button:hover {
+    background-color: rgba(51, 51, 51, 0.2);
+}
+
+@keyframes slide {
+    95% {
+        right: 38%;
+    }
+
+    100% {
+        right: 35%;
+    }
+}
+
+
+.push-warning {
+    position: fixed;
+    z-index: 16000000;
+    width: 350px !important;
+    height: 150px;
+    top: 5%;
+    right: 100px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    font-family: "Segoe UI", Tahoma, sans-serif !important;
+    font-size: 15px !important;
+    animation: slide 0.6s forwards;
+}

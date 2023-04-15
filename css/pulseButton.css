@@ -1,0 +1,50 @@
+/*pulse Button*/
+.pulse-container {
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 100000 !important;
+  position: fixed !important;
+  top: 50%;
+  left: 5%;
+}
+
+.pulse-button {
+  position: absolute !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  background: #6cbd45 !important;
+  display: block !important;
+}
+
+.pulse-button:before,
+.pulse-button:after {
+  content: "" !important;
+  position: absolute !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-color: #6cbd45 !important;
+  border-radius: 50% !important;
+  z-index: 99999 !important;
+  opacity: 0.7;
+}
+
+.pulse-button:before {
+  animation: pulseButtonExtension 2s ease-out infinite;
+}
+
+.pulse-button:after {
+  animation: pulseButtonExtension 2s 1s ease-out infinite;
+}
+
+@keyframes pulseButtonExtension {
+
+  100% {
+    transform: scale(4);
+    opacity: 0.2;
+  }
+}
